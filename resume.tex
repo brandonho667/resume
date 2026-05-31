@@ -120,17 +120,19 @@
       {Robotics Software Engineer II}{September 2024 - Current}
       \resumeItemListStart
         \subItem
-          {Building a flexible, \textbf{real-time} robotics software platform to support the future of large metal additive manufacturing}
+          {Building a flexible, \textbf{real-time} robotics software platform (\textbf{C++}) to support large metal additive manufacturing}
         \resumeItem{Project Management}
-          {Successfully led/planned/executed \textbf{1-year R\&D project} with team of 3 engineers, documented + iterated on road map with team, presented progress to stakeholders monthly, delegated work via \textbf{Jira} }
+          {Successfully executed \textbf{1-year R\&D project} to revamp core SW middleware with team of 3 engineers, wrote and iterated on roadmap, presented monthly to stakeholders, delegated work via \textbf{Jira}}
+        \resumeItem{RT Middleware}
+          {Built novel RT-capable \textbf{Zenoh+EVL}-based RMW for in-band/out-of-band comms; migrated platform from shmem/DDS, increasing throughput \textbf{10x}, reliability \textbf{1.5x}, reducing codebase redundancy \textbf{15\%}}
         \resumeItem{RT Linux Kernel}
-          {automated \textbf{Xenomai4} build/packaging via \textbf{Ansible} + contributor: patched network stack at driver layer (\href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/e8fe20b2467a9ed75d58efc1d3afb50b032993fa}{upstream}) and transient page faults (\href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/fe63838c8a0c1c249006fb41c735c4904947d2d6}{upstream}) \textbf{reducing core SW crashes by 90\%}}
-        \resumeItem{ROS Middleware}
-        {Built, tested, and benchmarked novel \textbf{RT-cloud} comms (\textbf{Zenoh+EVL}-based RMW), removed redundant shmem hop (\textbf{\texttt{$\sim$}15\%} codebase) and increased RT $\leftrightarrow$ non-RT comms throughput \textbf{10x} and reliability \textbf{1.5x}}
-        \resumeItem{Sensor Data}
-      {Integrated continuous scanning w/ \textbf{2D laser profilometer} (Gocator) + RANSAC to extract weld bead geometry in real-time, increasing \textbf{data completeness by 20x} and reducing noise by \textbf{30\%} over discrete method}
+          {Automated \textbf{Xenomai4} build/packaging via \textbf{Ansible}; contributed upstream patches fixing \href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/e8fe20b2467a9ed75d58efc1d3afb50b032993fa}{network stack} packet leak and \href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/fe63838c8a0c1c249006fb41c735c4904947d2d6}{page faults} in real-time processes, \textbf{reducing core SW crashes by 90\%}}
+        \resumeItem{Sensor Integration}
+      {Integrated Gocator 2D laser profilometer with real-time \textbf{RANSAC circle fitting} to extract weld bead geometry at \textbf{10Hz}, increasing part geometry \textbf{data completeness 20x}, reducing noise by \textbf{30\%}}
         \resumeItem{Closed-loop Control}
-        {Designed, ran, documented, and analyzed results for exploratory trials of closed-loop, real-time weld param control in collab w/ sim + weld team, \textbf{improving bead geometry consistency by 30\%} }
+        {Implemented \textbf{PID} w/ anti-windup for wire feed speed, \textbf{reducing bead variation by 30\%}}
+        \resumeItem{Web UI}
+        {Developed \textbf{TypeScript/React} command center with \textbf{Foxglove WebSocket}, migrated from rosbridge reducing crashes by \textbf{50\%}; collaborated with weld engineers to build UI features improving weld process control}
       \resumeItemListEnd
   \resumeSubheading
       {Relativity Space}{Long Beach, CA}
@@ -218,8 +220,6 @@
         {Lead a team of \textbf{20+ SWE w/ SCRUM} and spearheaded documentation on Notion}
         \resumeItem{Autonomous Exploration}
           {Implemented RRT* search in C++, \textbf{increasing rover exploration speed \texttt{$\sim$}10x}}
-        \resumeItem{Sensor Fusion}
-        {Fused GPS with local position from IMU and stereo camera for a \textbf{$\sim$20\% increase in accuracy}}
         \resumeItem{Obstacle Avoidance}{Created a \textbf{ROS} obstacle detection and avoidance pipeline in C++ with \textbf{RealSense} stereo camera to efficiently convert 3D pointclouds at 30Hz into occupancy grid and output avoidance waypoints}
         \resumeItemListEnd
     % \resumeSubheading
