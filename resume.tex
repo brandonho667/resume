@@ -1,0 +1,301 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\subItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\vspace{-2pt}
+      \textbf{#1} & #2 \\\vspace{-2pt}
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\courseSubheading}[1]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1}
+        \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={}, leftmargin=0em]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.5em]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+
+\begin{center}
+    \textbf{\LARGE \href{https://brandonho667.github.io/}{Brandon Ho}} \\ \vspace{5pt}
+    \small \faPhone* {(858) 330-9711} \hspace{1pt} $|$
+    \hspace{1pt} \href{mailto:brandonho667@gmail.com} {\faEnvelope \hspace{2pt} {brandonho667@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://github.com/brandonho667}{\faGithub \hspace{2pt} {brandonho667}} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://www.linkedin.com/in/bbho/}{\faLinkedin \hspace{2pt} {bbho}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California San Diego}{GPA: 3.93/4 (M.S.)}
+      {B.S. Computer Engineering (Magna Cum Laude), M.S. Intelligent Systems, Robotics \& Control}{June 2024}
+        \resumeItemListStart
+            \resumeItem{Relevant Coursework}{Software Engineering, Deep Learning, Operating Systems, Computer Vision, Autonomous Vehicles, Sensing \& Estimation, Planning \& Learning, Robot Sys Design \& Implementation, Statistical Learning}
+        \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Relativity Space}{Long Beach, CA}
+      {Robotics Software Engineer II}{September 2024 - Current}
+      \resumeItemListStart
+        \subItem
+          {Building a flexible, \textbf{real-time} robotics software platform to support the future of large metal additive manufacturing}
+        \resumeItem{Project Management}
+          {Successfully led/planned/executed \textbf{1-year R\&D project} with team of 3 engineers, documented + iterated on road map with team, presented progress to stakeholders monthly, delegated work via \textbf{Jira} }
+        \resumeItem{RT Linux Kernel}
+          {automated \textbf{Xenomai4} build/packaging via \textbf{Ansible} + contributor: patched network stack at driver layer (\href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/e8fe20b2467a9ed75d58efc1d3afb50b032993fa}{upstream}) and transient page faults (\href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/fe63838c8a0c1c249006fb41c735c4904947d2d6}{upstream}) \textbf{reducing core SW crashes by 90\%}}
+        \resumeItem{ROS Middleware}
+        {Built, tested, and benchmarked novel \textbf{RT-cloud} comms (\textbf{Zenoh+EVL}-based RMW), removed redundant shmem hop (\textbf{\texttt{$\sim$}15\%} codebase) and increased RT $\leftrightarrow$ non-RT comms throughput \textbf{10x} and reliability \textbf{1.5x}}
+        \resumeItem{Sensor Data}
+      {Integrated continuous scanning w/ \textbf{2D laser profilometer} (Gocator) + RANSAC to extract weld bead geometry in real-time, increasing \textbf{data completeness by 20x} and reducing noise by \textbf{30\%} over discrete method}
+        \resumeItem{Closed-loop Control}
+        {Designed, ran, documented, and analyzed results for exploratory trials of closed-loop, real-time weld param control in collab w/ sim + weld team, \textbf{improving bead geometry consistency by 30\%} }
+      \resumeItemListEnd
+  \resumeSubheading
+      {Relativity Space}{Long Beach, CA}
+      {Robotics Software Engineer Intern}{June 2023 - September 2023}
+      \resumeItemListStart
+        \subItem
+          {Exposing \textbf{OPC-UA} interface on Fronius welders to real-time context for Wire Arc Additive Manufacturing}
+        \resumeItem{ROS2 Driver}
+          {Wrote an OPC-UA driver in \textbf{ROS2 (C++)} to read and write over RT (shared memory) and non-RT contexts, exposing \textbf{40+ new parameters} and increasing controllable welding parameters by \textbf{5x}}
+        \resumeItem{System Design}
+          {Refactored welder state machine and inverted object dependencies, \textbf{reducing 1000+ lines of code}}
+        \resumeItem{UI Dev}
+          {Created web interface for weld engineers to interact with OPC-UA parameters in \textbf{TypeScript}}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Garmin}{Brea, CA}
+      {Software Engineer Intern}{June 2022 - December 2022}
+      \resumeItemListStart
+        \subItem
+          {Automating release processes and mock radio UI layer on the Tuner Team (Garmin AutoOEM Radio)}
+        \resumeItem{Process Automation}
+          {Utilized Python REST APIs to automate page generation with user-configurable metadata}
+        \resumeItem{UI Automation}
+          {Automated mock UI creation and deployment using MQTT \& Node-RED for \textbf{214 D-Bus services}}
+      \resumeItemListEnd
+    % \resumeSubheading
+    %   {Yonder Dynamics}{La Jolla, CA}
+    %   {Software Lead}{October 2020 - Present}
+    %   \resumeItemListStart
+    %     \subItem
+    %       {Lead software dev for rover to autonomously path and perform tasks in the University Rover Competition}
+    %     \resumeItem{Project Management}
+    %     {Leading a team of \textbf{20+ SWE w/ SCRUM} and spearheading documentation on Notion}
+    %     \resumeItem{Autonomous Exploration}
+    %       {Implementing AR-tag detection with computer vision and researching RRT* search algorithm to update a live AR-tag probability map in C++, \textbf{increasing rover exploration speed by \texttt{$\sim$}10x}}
+    %     \resumeItem{Sensor Fusion}
+    %     {Fusing GPS with local position from IMU and stereo camera for a \textbf{$\sim$20\% increase in accuracy}}
+    %     \resumeItem{Obstacle Avoidance}{Created a \textbf{ROS} obstacle detection and avoidance pipeline in C++ with \textbf{RealSense} stereo camera to efficiently convert 3D pointclouds at 30Hz into occupancy grid and output avoidance waypoints}
+    %   \resumeItemListEnd
+    \resumeSubheading
+      {InflammaSense}{La Jolla, CA}
+      {Software Developer}{January 2021 - September 2022}
+      \resumeItemListStart
+        \subItem
+          {Built medical device to record and analyze neural signals for early signs of sepsis, published \textbf{Scientific Reports} (\href{https://www.nature.com/articles/s41598-022-21817-w}{link})}
+        \resumeItem{Data Pipeline}
+          {Designed a robust async data pipeline with the \textbf{ZeroMQ} Python API for the wireless display, transmission, storage (\textbf{PostgreSQL}), analysis of neural data for an array of \textbf{100+ medical devices (\texttt{$\sim$}155 Mbps)}}
+        \resumeItem{Project Management}
+          {Documented a comprehensive system model and \textbf{leading a team of 5+ SWE} with Asana}
+        \resumeItem{UI Dev}
+          {Built a GUI to display high throughput EKG data (8 kHz) w/ \textbf{PyQt}, enabling real-time data monitoring}
+      \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Bae Lab}{UCSD Nanoengineering}
+    %   {Undergraduate Research Assistant}{September 2020 - Present}
+    %   \resumeItemListStart
+    %     \subItem
+    %       {Researching computational methods to control hydrogel mechanics via analysis of microscopy images and modulus}
+    %   \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Coding for Impact}{Your Life Counts}
+    %   {Web Developer}{July 2020 - Present}
+    %   \resumeItemListStart
+    %     \subItem
+    %       {Assisting suicide prevention nonprofit Your Life Counts in web development, reaching out to 1300+ people}
+    %     \resumeItem{WordPress}
+    %       {Using PHP/CSS/HTML/JS to create and design lightweight dynamic plug-ins (video carousel)}
+    %   \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Autonomous Rover Path Planning} {Yonder Dynamics}
+        {Software Lead}{September 2020 - June 2023}
+        \resumeItemListStart
+        \subItem
+          {Lead software dev for rover to autonomously path and perform tasks in the University Rover Competition}
+        \resumeItem{Project Management}
+        {Lead a team of \textbf{20+ SWE w/ SCRUM} and spearheaded documentation on Notion}
+        \resumeItem{Autonomous Exploration}
+          {Implemented RRT* search in C++, \textbf{increasing rover exploration speed \texttt{$\sim$}10x}}
+        \resumeItem{Sensor Fusion}
+        {Fused GPS with local position from IMU and stereo camera for a \textbf{$\sim$20\% increase in accuracy}}
+        \resumeItem{Obstacle Avoidance}{Created a \textbf{ROS} obstacle detection and avoidance pipeline in C++ with \textbf{RealSense} stereo camera to efficiently convert 3D pointclouds at 30Hz into occupancy grid and output avoidance waypoints}
+        \resumeItemListEnd
+    % \resumeSubheading
+    %     {SEMPro}{Bae Lab}
+    %     {Using Explainable AI to Learn Structure-Property Insights from Hydrogel Microscopy Images}{Spring 2021}
+    %     \resumeItemListStart
+    %     \resumeItem{Web Scraping}
+    %       {Developed NLP scraping algorithm (Selenium+BeautifulSoup), compiling data from \textbf{1100+ articles}}
+    %     \resumeItem{Deep Learning}
+    %       {Optimized and trained a ResNext model in Pytorch to predict hydrogel modulus from dataset of microscopy images, able to predict within a range of 1 log Pa with \textbf{an accuracy of $\sim$90\%}}
+    %     \resumeItem{Explainable AI}
+    %         {Implemented regression activation mapping on a CNN to expose learned structure-property insights}
+    %     \resumeItemListEnd
+    % \resumeSubheading
+    %     {\href{https://github.com/brandonho667/autow}{Autow}} {Autonomous Vehicles}
+    %     {Autonomous tow hitching using Computer Vision}{Fall 2022}
+    %     \resumeItemListStart
+    %     \subItem
+    %         {Led a team of two mechanical and one software engineer in programming an RC car to autonomously hitch to a trailer}
+    %     \resumeItem{ROS2}
+    %         {Built an async callback system with \textbf{ROS2} for seamless cohesion between driver and autonomous control}
+    %     \resumeItem{Computer Vision}
+    %         {Utilized \textbf{OpenCV} for localization w/ ArUco tags, resulting in a \textbf{90\% hitching accuracy}}
+    %     \resumeItemListEnd
+
+    % \resumeSubheading
+    %     {Vehicle Trajectory Prediction}
+    %     {Automatic tow hitching algorithm using Computer Vision}{Fall 2022}
+    %     \resumeItemListStart
+    %     \subItem
+    %         {Built and trained deep learning models for class-wide Kaggle competition, placing \textbf{top 10 across 50 teams}}
+    %     \resumeItem{Data Analysis}
+    %         {Analyzed and preprocessed trajectory metrics, \textbf{improving baseline performance by 3x}}
+    %     \resumeItem{LSTM}
+    %         {Implemented an LSTM encoder-decoder model w/ attention \textbf{improving model performance by 11x}}
+    %     \resumeItemListEnd
+
+    % \resumeSubheading
+    %     {UCSD Connect}{IEEE Quarterly Projects}
+    %     {Connecting UCSD students during the COVID-19 social isolation crisis}{December 2020}
+    %     \resumeItemListStart
+    %     \subItem
+    %         {Led a team of 5 developers to create a college social media app and win \textbf{2nd Place} in the 2020 UCSD IEEE QP}
+    %     \resumeItem{Full-stack App Development}
+    %         {Utilized Android Studio to design app UI and back-end (login, matching, chat)}
+    %     \resumeItem{System Management}
+    %         {Directed communication between front/back-end and workflow \& issue creation in GitHub}
+    %     \resumeItemListEnd
+
+    % \resumeSubheading
+    %     {PersonAI Chat}{UCSD Summer Program for Incoming Students}
+    %     {AI Chatbot with Customizable Personas}{August 2020}
+    %     \resumeItemListStart
+    %     \subItem{Led a team of 4 developers to create the back-end for the AI chat site, ProfessorUWU}
+    %     \resumeItem{TensorFlow/OpenAI GPT}
+    %         {Implemented TensorFlow with OpenAI GPT's Transformer-based language model on custom dialogue datasets to create unique personas to chat with}
+    %     \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+   \vspace{-2pt}\item
+        \textbf{Programming Languages:}{ Python, C++, Java, SQL, JS, PHP, HTML/CSS, TypeScript }
+   \vspace{-5pt}
+
+   \vspace{-2pt}\item
+        \textbf{Technologies:}{ AWS, Git, Jupyter Notebook, Linux, Docker, Confluence, Jira, Gerrit, Gitlab CI }
+    \vspace{-5pt}
+
+    \vspace{-2pt}\item
+        \textbf{Frameworks:}{ ROS2, OPC-UA, PyTorch, MQTT, Zenoh, Xenomai, NumPy, Pandas, SciKit, Ansible }
+    \vspace{-5pt}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
