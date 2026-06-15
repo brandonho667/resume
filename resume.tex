@@ -98,45 +98,28 @@
     \\ \vspace{-3pt}
 \end{center}
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of California San Diego}{GPA: 3.93/4 (M.S.)}
-      {B.S. Computer Engineering (Magna Cum Laude), M.S. Intelligent Systems, Robotics \& Control}{June 2024}
-        \resumeItemListStart
-            \resumeItem{Relevant Coursework}{Robot System Design \& Implementation (kinematics, dynamics, control), Planning \& Learning, Sensing \& Estimation, Autonomous Vehicles, Computer Vision, Deep Learning, Software Engineering, Operating Systems, Statistical Learning}
-        \resumeItemListEnd
-
-
-  \resumeSubHeadingListEnd
-
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
   \resumeSubheading
       {Relativity Space}{Long Beach, CA}
-      {Robotics Software Engineer II}{September 2024 - Current}
+      {\textbf{Robotics Software Engineer II}}{September 2024 - Current}
       \resumeItemListStart
         \subItem
           {Building a flexible, \textbf{real-time} robotics software platform (\textbf{C++}) to support large metal additive manufacturing}
-        \resumeItem{Multi-Axis Robot Integration}
-          {Integrated and programmed \textbf{6-DOF industrial articulated robot arms} for additive manufacturing, implementing \textbf{forward/inverse kinematics}, tool/base frame transformations, and \textbf{trajectory generation} for coordinated motion planning}
+        \resumeItem{ROS Middleware}
+          {Built novel RT-capable \textbf{Zenoh+EVL}-based RMW for in-band/out-of-band comms, increasing throughput \textbf{10x}, reliability \textbf{1.5x}, reducing codebase redundancy \textbf{15\%}}
+        \resumeItem{Real-Time Safety \& Determinism}
+          {Built safety-critical RT monitoring system tracking loop overruns and packet drops; implemented \textbf{dynamic TDMA throttling} to prevent cycle overruns by predicting write times and deferring to next cycle; designed middleware packet reordering and stale packet dropping for data fidelity; profiled RT processes to optimize worst-case timing; validated on \textbf{HITL} systems with comprehensive test coverage}
         \resumeItem{Robot-Sensor Coordination}
-          {Integrated Gocator 2D laser profilometer with 6-DOF robot motion planning; implemented real-time \textbf{RANSAC circle fitting} at \textbf{10Hz} and \textbf{ICP registration} to compensate for robot positioning inaccuracies, increasing data completeness \textbf{20x} and reducing noise by \textbf{50\%}}
-        \resumeItem{End-Effector Control}
-          {Developed real-time control software for welding torch end-effectors synchronized with 6-axis robot motion, achieving \textbf{1ms control loop latency} for closed-loop sensor-robot coordination}
-        \resumeItem{Closed-Loop Control}
-          {Designed and implemented \textbf{PID controllers with anti-windup} for wire feed speed, reducing bead variation by \textbf{30\%}; integrated time-based adaptive parameter control for real-time weld process optimization}
-        \resumeItem{RT Middleware}
-          {Built novel RT-capable \textbf{Zenoh+EVL}-based RMW for in-band/out-of-band comms; migrated platform from shmem/DDS, increasing throughput \textbf{10x}, reliability \textbf{1.5x}, reducing codebase redundancy \textbf{15\%}}
+          {Enabled continuous 3D scanning by integrating a \textbf{Gocator 2D laser profilometer} on 6-DOF robot; implemented real-time \textbf{RANSAC circle fitting} at \textbf{10Hz} and \textbf{ICP registration} to compensate for robot positioning inaccuracies, increasing data completeness \textbf{20x} and reducing noise by \textbf{50\%}}
+        \resumeItem{Closed-loop Control}
+        {Implemented \textbf{PID} w/ anti-windup for wire feed speed, \textbf{reducing bead variation by 30\%}}
         \resumeItem{RT Linux Kernel}
-          {Automated \textbf{Xenomai4} build/packaging via \textbf{Ansible}; contributed upstream patches fixing \href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/e8fe20b2467a9ed75d58efc1d3afb50b032993fa}{network stack} packet leak and \href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/fe63838c8a0c1c249006fb41c735c4904947d2d6}{page faults} in real-time processes, \textbf{reducing core SW crashes by 90\%}}
+          {Automated \textbf{Xenomai4} build/packaging via \textbf{Ansible}; contributed upstream patches fixing \href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/e8fe20b2467a9ed75d58efc1d3afb50b032993fa}{network stack} packet leak and \href{https://gitlab.com/Xenomai/xenomai4/linux-evl/-/commit/fe63838c8a0c1c249006fb41c735c4904947d2d6}{page faults}, \textbf{improving system safety during robot operation (\textbf{90\%} crash reduction)}}
         \resumeItem{Project Management}
-          {Successfully executed \textbf{1-year R\&D project} to revamp core SW middleware with team of 3 engineers, wrote and iterated on roadmap, presented monthly to stakeholders, delegated work via \textbf{Jira}}
-        \resumeItem{Experimental Design}
-          {Designed and executed \textbf{6+ weld trials}; logged all telemetry to cloud for dataset generation, performed \textbf{Python} data analysis to support simulation team and future learning-based optimization}
+          {Successfully executed \textbf{1-year R\&D project} to revamp core SW middleware with team of 3 engineers, wrote roadmap, presented monthly to stakeholders, delegated work via \textbf{Jira}}
       \resumeItemListEnd
   \resumeSubheading
       {Relativity Space}{Long Beach, CA}
@@ -181,9 +164,11 @@
         \subItem
           {Built medical device to record and analyze neural signals for early signs of sepsis, published \textbf{Scientific Reports} (\href{https://www.nature.com/articles/s41598-022-21817-w}{link})}
         \resumeItem{Data Pipeline}
-          {Designed a robust async data pipeline with the \textbf{ZeroMQ} Python API for the wireless display, transmission, storage (\textbf{PostgreSQL}), analysis of neural data for an array of \textbf{100+ medical devices (\texttt{$\sim$}155 Mbps)}, creating infrastructure suitable for ML training workflows}
+          {Designed a robust async data pipeline with the \textbf{ZeroMQ} Python API for the wireless display, transmission, storage (\textbf{PostgreSQL}), analysis of neural data for an array of \textbf{100+ medical devices (\texttt{$\sim$}155 Mbps)}}
         \resumeItem{Project Management}
           {Documented a comprehensive system model and \textbf{leading a team of 5+ SWE} with Asana}
+        \resumeItem{UI Dev}
+          {Built a GUI to display high throughput EKG data (8 kHz) w/ \textbf{PyQt}, enabling real-time data monitoring}
       \resumeItemListEnd
 
     % \resumeSubheading
@@ -206,6 +191,18 @@
 
   \resumeSubHeadingListEnd
 
+  %-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California San Diego}{GPA: 3.93/4 (M.S.)}
+      {B.S. Computer Engineering (Magna Cum Laude), M.S. Intelligent Systems, Robotics \& Control}{June 2024}
+        \resumeItemListStart
+            \resumeItem{Relevant Coursework}{Software Engineering, Deep Learning, Operating Systems, Computer Vision, Autonomous Vehicles, Sensing \& Estimation, Planning \& Learning, Robot Sys Design \& Implementation, Statistical Learning}
+        \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
@@ -286,11 +283,11 @@
    \vspace{-5pt}
 
    \vspace{-2pt}\item
-        \textbf{Technologies:}{ AWS, Git, Jupyter Notebook, Linux, Docker, MATLAB/Simulink, Confluence, Jira, Gerrit, Gitlab CI, Claude }
+        \textbf{Technologies:}{ AWS, Git, Jupyter Notebook, Linux, Docker, Confluence, Jira, Gerrit, Gitlab CI, Claude }
     \vspace{-5pt}
 
     \vspace{-2pt}\item
-        \textbf{Frameworks:}{ ROS2, OPC-UA, PyTorch, MQTT, Zenoh, Xenomai, EtherCAT, NumPy, Pandas, SciKit, Ansible }
+        \textbf{Frameworks:}{ ROS2, OPC-UA, PyTorch, MQTT, Zenoh, Xenomai, NumPy, Pandas, SciKit, Ansible }
     \vspace{-5pt}
  \resumeSubHeadingListEnd
 
